@@ -1,0 +1,29 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1000" width="1920" height="1000">
+	<title>hero-area-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m-82.2 543.8h2002.3v472.9h-2002.3z"/>
+		</clipPath>
+		<linearGradient id="g1" x1="570.2" y1="776.6" x2="1963.3" y2="776.6" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#04c1cb"/>
+			<stop offset="1" stop-color="#b7dee0"/>
+		</linearGradient>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m-82.2 543.8h2002.3v472.9h-2002.3z"/>
+		</clipPath>
+		<linearGradient id="g2" x1="-29" y1="877.4" x2="2014.3" y2="877.4" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#04c1cb"/>
+			<stop offset="1" stop-color="#ceeff1"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<path id="Layer" class="s0" d="m570.2 871.9c129.2-102.3 299.6-137 464.1-145.7 164.6-8.7 330.3 5.4 494-13.8 126.6-14.8 250.8-49.6 366.6-102.6 16.8-7.7 37.2-15.6 52.8-5.6 17 10.9 16.7 35.5 14.3 55.6-8 68.4-19.7 144-73.3 187.2-32.6 26.2-75.2 35.6-116.3 43.5-284.4 54.4-575.4 73.9-864.6 57.9-116.1-6.6-235.8-19.9-337.6-76.5z"/>
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp2)">
+		<path id="Layer" class="s1" d="m1185.9 825.3c222.5-23 432-132.2 655.6-135.5 39.3-0.7 81 2.9 112.7 26.2 50.7 37.2 57.4 109 59.6 171.8 1.6 44.6 1.2 94.4-29.5 126.8-30 31.6-78.4 35.2-121.9 36-324.4 5.6-648.5-34.9-972.9-25.8-301.6 8.5-629.1 85.8-918.5 0.4 78.4-117 234.1-210.5 373.1-233.7 139-23.2 281.1-7.6 420.8 10.4 139.7 17.8 280.8 37.8 421 23.4z"/>
+	</g>
+</svg>
