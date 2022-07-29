@@ -1,0 +1,165 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+/*-------------------------------------------------------------------
+Admin Dashboard
+----------------------------------------------------------------------*/
+/*Main Content */
+.home-section .home-content{
+  position: relative;
+  padding-top: 104px;
+}
+/*Overview Boxes */
+.home-content .overview-boxes{
+  align-items: center;
+  width: 100%;
+  margin-bottom: 26px;
+}
+.overview-boxes .box-topic{
+  font-weight: 500;
+}
+.overview-boxes .icon .bx,
+.overview-boxes .icon .fa{
+  font-size: 50px;
+}
+.overview-boxes .icon .indicator .bx,
+.overview-boxes .icon .indicator .fa{
+  font-size: 12px;
+  color: white;
+  background: rgb(6, 20, 95);
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+.overview-boxes .icon .indicator .text{
+  font-size: 12px;
+  text-decoration: none;
+}
+.overview-boxes .icon .indicator i.second{
+  background: #025229;
+}
+.overview-boxes .icon .indicator i.third{
+  background: #470238;
+}
+.overview-boxes .icon .indicator i.fourth{
+  background: #4b0109;
+}
+.overview-boxes .icon i.one{
+  border-radius: 12px;
+  padding: 5px;
+  color: rgb(6, 20, 95);
+  background: #cce5ff;
+}
+.overview-boxes .icon i.two{
+  border-radius: 12px;
+  padding: 5px;
+   color: #025229;
+   background: #C0F2D8;
+ }
+ .overview-boxes .icon i.three{
+  border-radius: 12px;
+  padding: 5px;
+   color: #470238;
+   background: #ffc9f3;
+ }
+ .overview-boxes .icon i.four{
+  border-radius: 12px;
+  padding: 5px;
+   color: #4b0109;
+   background: #d69ba0;
+ }
+
+/*List Table */
+.home-content .list-boxes{
+  display: flex;
+  justify-content: space-between;
+}
+/* Responsive Media Query */
+@media (max-width: 1150px) {
+  .home-content .list-boxes{
+    flex-direction: column;
+  }
+  .home-content .list-boxes .box{
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .overview-boxes .box{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.list-boxes .main-panel .content-wrapper{
+  margin: 20px;
+}
+/*-------------------------------------------------------------------
+Admin Profile
+----------------------------------------------------------------------*/
+.home-section .home-content .profile{
+  align-items: center;
+  overflow-x: hidden;
+  width: 100%;
+  margin-bottom: 26px;
+}
+.home-section .home-content .profile .profile-details{
+  margin-top: 20px;
+}
+/*-------------------------------------------------------------------
+Admin List
+----------------------------------------------------------------------*/
+.staffList-action{
+  text-align: center;
+}
+.staffList-action .dropdown-menu i{
+  margin-right: 10px;
+}
+.home-section .home-content-breadcrumb{
+  margin-top: 50px;
+  overflow-x: hidden;
+}
+/*-------------------------------------------------------------------
+Action Button
+----------------------------------------------------------------------*/
+.home-section .home-content .action-button .fa-edit{
+  background-color: green;
+  color: white; font-size: 20px;
+  padding: 5px;
+}
+.home-section .home-content .action-button .fa-trash-alt{
+  background-color: red;
+  color: white; font-size: 20px;
+  padding: 5px;
+}
+.home-section .home-content .action-button .fa-check {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+}
+.home-section .home-content .action-button .fa-eye{
+  background-color: rgb(8, 53, 252);
+  color: white; font-size: 20px;
+  padding: 5px;
+}
+.home-section .home-content .action-button .fa-pen-alt{
+  background-color: rgb(112, 5, 103);
+  color: white; font-size: 20px;
+  padding: 5px;
+}
+.home-section .home-content .action-button button{
+  padding: 0;
+}
+

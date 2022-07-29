@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="restaurantStaff.php">
+                        <a href="submitTicket.php">
                             <div class="card card-feature shadow-lg text-white">
                                 <img src="./assets/img/feature/restaurantStaff.svg" class="card-img card-img-choice" alt="...">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
@@ -32,7 +32,7 @@
                         </a>
                     </div>
                     <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <a href="public.php">
+                        <a href="ticket.php">
                             <div class="card card-feature shadow-lg text-white">
                                 <img src="./assets/img/feature/customer.svg" class="card-img card-img-choice" alt="...">
                                 <div class="card-img-overlay d-flex flex-column justify-content-end text-center">
@@ -44,6 +44,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- Footer Section Start -->
+        <?php include('./assets/includes/footer.php') ?>
+        <!-- Footer Section End -->
 
         <!-- Preloader -->
         <div id="preloader">

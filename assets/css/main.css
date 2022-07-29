@@ -58,9 +58,9 @@ ul li, ol li {
   list-style: none;
 }
 
-a:not([href]):not([tabindex]) {
+/* a:not([href]):not([tabindex]) {
   color: #fff;
-}
+} */
 
 .section-header {
   margin-bottom: 30px;
@@ -586,9 +586,14 @@ hr {
   cursor: pointer;
 }
 
-.navbar-brand img {
+.navbar-brand img { 
   width: 150px;
   height: 50px;
+}
+
+.footer-logo img {
+  width: 200px;
+  height: auto;
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
@@ -798,7 +803,7 @@ hr {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  padding: 120px 0 0;
+  padding: 50px 0 0;
 }
 
 #hero-area .contents .head-title {
@@ -1233,7 +1238,7 @@ textarea {
 /* Footer Area Start */
 .footer-area {
   position: relative;
-  padding: 150px 0px 0px;
+  padding: 50px 0px 0px;
   background: #fff;
 }
 
@@ -1409,4 +1414,130 @@ textarea {
 
 .form-shape {
   margin-bottom: 10px !important;
+}
+
+/*  Admin Login */
+.card-login {
+  border-radius: 50px;
+  padding: 50px;
+}
+
+/* Google Map */
+#map, #addMap, #editMap {
+  width:100%;
+  height: 200px;
+}
+
+.pac-container {
+  z-index: 1051 !important;
+}
+
+.gmnoprint {
+  display: none;
+}
+
+.pac-target-input{
+  left: 0px !important;
+}
+
+/* Sidebar Icon */
+.sidebar .nav-item .nav-link img{
+  margin-right: 20px;
+}
+
+.sidebar .nav-item{
+  margin-left: 20px;
+}
+
+.sidebar .nav-item:hover:not(.sidebar .active){
+  background-color: rgba(2, 41, 59, 0.481);
+  border-radius: 30px 0 0 30px;
+}
+
+.sidebar .active{
+  background-color: rgba(2, 41, 59);
+  border-radius: 30px 0 0 30px;
+}
+
+@media (max-width: 768px){
+.sidebar .nav-item .nav-link img{
+  margin-right: 0;
+}
+}
+
+
+@media (min-width: 768px){
+.sidebar.toggled .nav-item .nav-link img{
+  margin-right: 0;
+}
+
+.sidebar.toggled .nav-item{
+  margin-left: 0;
+}
+}
+
+/* Restaurant Ticket */
+table{
+  width: 100% !important;
+}
+.table-ticket {
+  color: black;
+}
+.table-responsive {
+  margin-bottom: 20px;
+}
+.table-ticket tbody tr:hover{
+color: black;
+}
+
+/* Action Button */
+.action-button .view {
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5px !important;
+}
+.action-button .approve {
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px !important;
+}
+.action-button .delete{
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px !important;
+}
+.action-button .edit {
+  background-color: yellow;
+  padding: 5px;
+  border-radius: 5px !important;
+}
+
+.action-button .approve:disabled,
+.action-button .delete:disabled,
+.action-button .edit:disabled,
+.btn-disabled:disabled{
+  opacity: 0.5;
+}
+
+/* Public Section*/
+.public-container {
+  height: 600px;
+  overflow: auto;
+}
+
+/* Modal */
+@media (min-width: 992px){
+  .modal-size {
+    max-width: 1200px;
+  }
+}
+
+body{
+  padding-right: 0px !important;
+}
+
+.nameTitle{
+  color: black !important;
+  font-size: 20px;
+  font-weight: 800;
 }
