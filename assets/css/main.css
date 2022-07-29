@@ -478,7 +478,9 @@ hr {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
+.objectives-content{
+  height: 150px !important;
+}
 .objectives-item .objectives-content h3 a {
   font-size: 16px;
   color: #585b60;
@@ -1540,4 +1542,8 @@ body{
   color: black !important;
   font-size: 20px;
   font-weight: 800;
+}
+
+.section-how{
+  font-size: 25px !important;
 }

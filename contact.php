@@ -58,7 +58,6 @@ include 'connection.php';
               } else {
                 echo '<div class="alert alert-danger" role="alert">
                       Ticket is not approved</div>';
-                echo mysqli_error($db);
               } ?>
             </li>
           </ul>
@@ -83,7 +82,6 @@ include 'connection.php';
               } else {
                 echo '<div class="alert alert-danger" role="alert">
                       Contact request is not deleted</div>';
-                echo mysqli_error($db);
               }
             }
 
@@ -99,7 +97,6 @@ include 'connection.php';
               } else {
                 echo '<div class="alert alert-danger" role="alert">
             Status is not updated</div>';
-                echo mysqli_error($db);
               }
             }
             ?>

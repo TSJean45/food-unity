@@ -58,7 +58,6 @@ include 'connection.php';
                             } else {
                                 echo '<div class="alert alert-danger" role="alert">
                       Ticket is not approved</div>';
-                                echo mysqli_error($db);
                             } ?>
                         </li>
                     </ul>
@@ -103,7 +102,6 @@ Ticket is added</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
 Ticket is not added</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -119,7 +117,6 @@ Ticket is not added</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
                       Data is not deleted</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -135,7 +132,6 @@ Ticket is not added</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
                       Ticket is not approved</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -145,9 +141,10 @@ Ticket is not added</div>';
                         $resPax = $_POST["editRestaurantPax"];
                         $resNote = $_POST["editRestaurantNote"];
                         $date = $_POST["editRestaurantDate"];
+                        $password = $_POST["editSubmitterPassword"];
 
                         $approveSql = "UPDATE `restaurantTicket` SET `restaurantEndTime`='$resTime', `restaurantPax`='$resPax'
-                        , `restaurantNote`='$resNote', `ticketDate`='$date' WHERE `ticketId`='$id'";
+                        , `restaurantNote`='$resNote', `ticketDate`='$date', `submitterPassword`='$password' WHERE `ticketId`='$id'";
                         $result = mysqli_query($db, $approveSql);
 
                         if ($result) {
@@ -156,7 +153,6 @@ Ticket is not added</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
                       Ticket is not edited</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -172,7 +168,6 @@ Ticket is not added</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
                       Ticket is not ended</div>';
-                            echo mysqli_error($db);
                         }
                     }
                     ?>
@@ -199,7 +194,6 @@ Ticket is not added</div>';
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     $pre = $row['ticketPrefix'];
                                     $id = $row['ticketId'];
-                                    $resName = $row['restaurantName'];
                                     $resAdd = $row['restaurantAddress'];
                                     $resTime = $row['restaurantEndTime'];
                                     $resNote = $row['restaurantNote'];
@@ -432,6 +426,15 @@ Ticket is not added</div>';
                                                         </div>
                                                         <div class="form-row">
                                                             <div class="col-md-12 mb-3">
+                                                                <label for="editSubmitterPassword" class="form-input-title"><b>Verification Password</b></label>
+                                                                <input type="password" class="form-control" name="editSubmitterPassword" value="<?php echo $subPassword?>" required>
+                                                                <div class="invalid-feedback">
+                                                                    Please provide a valid password.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="col-md-12 mb-3">
                                                                 <label for="editRestaurantAddress" class="form-input-title"><b>Restaurant Address</b></label>
                                                                 <input type="text" class="form-control" id="editRestaurantAddress" name="editRestaurantAddress" value="<?php echo $resAdd; ?>" required readonly>
                                                                 <div class="invalid-feedback">
@@ -465,10 +468,10 @@ Ticket is not added</div>';
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
+                                                            <button class="btn btn-warning d-flex justify-content-start" type="submit" name="endBtn">End Campaign</button>
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                             <button class="btn btn-success" type="submit" name="editBtn">Save Changes</button>
-                                                            <button class="btn btn-warning" type="submit" name="endBtn">End Campaign</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -513,7 +516,7 @@ Ticket is not added</div>';
                                     <div class="form-row">
                                         <div class="col-md-4 mb-3">
                                             <label for="restaurantPax" class="form-input-title"><b>Estimated pax?</b></label>
-                                            <input type="text" class="form-control" name="restaurantPax" placeholder="20-30" required>
+                                            <input type="text" class="form-control" name="restaurantPax" required>
                                             <div class="invalid-feedback">
                                                 Please provide a valid range.
                                             </div>
@@ -537,7 +540,7 @@ Ticket is not added</div>';
                                     <div class="form-row">
                                         <div class="col-md-12 mb-3">
                                             <label for="restaurantNote" class="form-input-title"><b>Note (Optional)</b></label>
-                                            <textarea class="form-control" name="restaurantNote" placeholder="Enter notes that is important to clarify to the public."></textarea>
+                                            <textarea class="form-control" name="restaurantNote"></textarea>
 
                                             <div class="invalid-feedback">
                                                 Please provide a valid range.
@@ -576,17 +579,6 @@ Ticket is not added</div>';
                                             <small id="passwordHelp" class="form-text text-muted">Password is important to end or edit the campaign.</small>
                                             <div class="invalid-feedback">
                                                 Please provide a valid password.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                            <label class="form-check-label" for="invalidCheck">
-                                                Agree to terms and conditions
-                                            </label>
-                                            <div class="invalid-feedback">
-                                                You must agree before submitting.
                                             </div>
                                         </div>
                                     </div>

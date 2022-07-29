@@ -26,7 +26,7 @@ include 'connection.php';
           <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
             <div class="contents">
               <h2 class="head-title wow fadeInDown">Never Waste Food<br>Ever Again</h2>
-              <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat!</p>
+              <p class="wow fadeInDown">Why bin food when you can share it to the needy? Do your part right now to support a cause in food waste!</p>
               <div class="header-button wow fadeInUp">
                 <a href="feature.php" class="btn btn-common">Get Started</i></a>
               </div>
@@ -45,36 +45,8 @@ include 'connection.php';
   </header>
   <!-- Header Area wrapper End -->
 
-  <!-- About Section start -->
-  <div id="about" class="about-area section-padding bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-xs-12 info">
-          <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
-            <div>
-              <div class="site-heading">
-                <p class="mb-3">Manage Statistics</p>
-                <h2 class="section-title">Detailed Statistics of your Company</h2>
-              </div>
-              <div class="content">
-                <p>
-                  Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio.
-                </p>
-                <a href="#" class="btn btn-common mt-3">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-          <img class="img-fluid" src="assets/img/about/img-1.png" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- About Section End -->
-
   <!-- Objective Section Start -->
-  <section class="section-padding">
+  <section id="about" class="section-padding">
     <div class="container">
       <div class="section-header text-center">
         <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Our Objectives</h2>
@@ -89,7 +61,7 @@ include 'connection.php';
             </div>
             <div class="objectives-content">
               <h3><a href="#">Easy To View</a></h3>
-              <p>Find the nearest restaurant that has leftover food with no hassle and no sign in required. </p>
+              <p>Find the nearest restaurant that has leftover food with no hassle and no sign in required </p>
             </div>
           </div>
         </div>
@@ -113,7 +85,7 @@ include 'connection.php';
             </div>
             <div class="objectives-content">
               <h3><a href="#">Spread The Love</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+              <p>Spread love and share food to those who needs it </p>
             </div>
           </div>
         </div>
@@ -125,7 +97,7 @@ include 'connection.php';
             </div>
             <div class="objectives-content">
               <h3><a href="#">Solve Food Waste</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+              <p>A more effective way in solving food waste </p>
             </div>
           </div>
         </div>
@@ -136,8 +108,8 @@ include 'connection.php';
               <i class="lni-mobile"></i>
             </div>
             <div class="objectives-content">
-              <h3><a href="#">App Development</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+              <h3><a href="#">Reduce Leftover Food Waste</a></h3>
+              <p>Share the food instead of disposing it </p>
             </div>
           </div>
         </div>
@@ -149,7 +121,7 @@ include 'connection.php';
             </div>
             <div class="objectives-content">
               <h3><a href="#">User Friendly interface</a></h3>
-              <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt bibendum gravida. </p>
+              <p>A simple platform to navigate around easily </p>
             </div>
           </div>
         </div>
@@ -167,14 +139,16 @@ include 'connection.php';
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <h2 class="section-how wow fadeInDown d-flex justify-content-start" data-wow-delay="0.3s">For The Restaurant Staff</h2>
+          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
           <div class="content-left">
             <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
               <span class="icon">
                 <i class="lni-rocket"></i>
               </span>
               <div class="text">
-                <h4>Bootstrap 4 Based</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h4>Step 1</h4>
+                <p>Head over <a href='submitTicket.php'> HERE </a> to submit a campaign ticket.</p>
               </div>
             </div>
             <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
@@ -182,8 +156,8 @@ include 'connection.php';
                 <i class="lni-laptop-phone"></i>
               </span>
               <div class="text">
-                <h4>Fully Responsive</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h4>Step 2</h4>
+                <p>Wait for your campaign ticket to be approved.</p>
               </div>
             </div>
             <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
@@ -191,21 +165,32 @@ include 'connection.php';
                 <i class="lni-cog"></i>
               </span>
               <div class="text">
-                <h4>HTML5, CSS3 & SASS</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <h4>Step 3</h4>
+                <p>Check <a href='ticket.php'> HERE </a> to see your ticket submission </p>
+              </div>
+            </div>
+            <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
+              <span class="icon">
+                <i class="lni-calendar"></i>
+              </span>
+              <div class="text">
+                <h4>Step 4</h4>
+                <p>Edit or end your campaign by navigating to the edit dashboard of the ticket </p>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <h2 class="section-how wow fadeInDown d-flex justify-content-end" data-wow-delay="0.3s">For The General Public</h2>
+          <div class="shape wow fadeInDown " data-wow-delay="0.3s"></div>
           <div class="content-right">
             <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
               <span class="icon">
-                <i class="lni-leaf"></i>
+                <i class="lni-pencil"></i>
               </span>
               <div class="text">
-                <h4>Modern Design</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <h4>Step 1</h4>
+                <p>Head over <a href='ticket.php'> HERE </a> to view ongoing campaigns</p>
               </div>
             </div>
             <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
@@ -213,8 +198,8 @@ include 'connection.php';
                 <i class="lni-layers"></i>
               </span>
               <div class="text">
-                <h4>Multi-purpose Template</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h4>Step 2</h4>
+                <p>View campaign info to know more about the details</p>
               </div>
             </div>
             <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
@@ -222,8 +207,17 @@ include 'connection.php';
                 <i class="lni-leaf"></i>
               </span>
               <div class="text">
-                <h4>Working Contact Form</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h4>Step 3</h4>
+                <p>Get direction to the restaurant by viewing the campaign info</p>
+              </div>
+            </div>
+            <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
+              <span class="icon">
+                <i class="lni-phone"></i>
+              </span>
+              <div class="text">
+                <h4>Step 4</h4>
+                <p>Visit the restaurant and enjoy your food. Do call the organiser before hand to confirm the food availability</p>
               </div>
             </div>
           </div>
@@ -359,7 +353,6 @@ Message is sent</div>';
         } else {
           echo '<div class="alert alert-danger" role="alert">
 Message is not sent</div>';
-          echo mysqli_error($db);
         }
       } ?>
       <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">

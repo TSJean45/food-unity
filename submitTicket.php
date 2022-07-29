@@ -52,7 +52,6 @@ Ticket is submitted</div>';
                                 } else {
                                     echo '<div class="alert alert-danger" role="alert">
 Ticket is not submitted</div>';
-                                    echo mysqli_error($db);
                                 }
 
                                 $month = date('m');
@@ -77,16 +76,10 @@ Ticket is not submitted</div>';
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <!-- <div class="col-md-6 mb-3">
-                                        <label for="restaurantName" class="form-input-title"><b>Restaurant Name</b></label>
-                                        <input type="text" class="form-control" name="restaurantName" required>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid restaurant name.
-                                        </div>
-                                    </div> -->
                                     <div class="col-md-4 mb-3">
                                         <label for="restaurantPax" class="form-input-title"><b>Estimated pax?</b></label>
                                         <input type="text" class="form-control" name="restaurantPax" placeholder="20-30" required>
+                                        <small id="passwordHelp" class="form-text text-muted">Estimate how many people will the food be enough for?</small>
                                         <div class="invalid-feedback">
                                             Please provide a valid range.
                                         </div>
@@ -109,10 +102,10 @@ Ticket is not submitted</div>';
                                 <div class="form-row">
                                     <div class="col-md-12 mb-3">
                                         <label for="restaurantNote" class="form-input-title"><b>Note (Optional)</b></label>
-                                        <textarea class="form-control" name="restaurantNote" placeholder="Enter notes that is important to clarify to the public."></textarea>
-
+                                        <textarea class="form-control" name="restaurantNote"></textarea>
+                                        <small id="passwordHelp" class="form-text text-muted">Note to instruct the public on where and how to claim leftover food in your restaurant.</small>
                                         <div class="invalid-feedback">
-                                            Please provide a valid range.
+                                            Please provide a valid note.
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +121,7 @@ Ticket is not submitted</div>';
                                     </div>
                                     <div class="col-md-4 mb-3">
                                         <label for="submitterNumber" class="form-input-title"><b>Phone Number</b></label>
-                                        <input type="tel" class="form-control" name="submitterNumber" placeholder="01234398454" required>
+                                        <input type="tel" class="form-control" name="submitterNumber" required>
                                         <div class="invalid-feedback">
                                             Please provide a valid phone number.
                                         </div>
@@ -155,7 +148,16 @@ Ticket is not submitted</div>';
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                         <label class="form-check-label" for="invalidCheck">
-                                            Agree to terms and conditions
+                                            I understand that further modification of the restaurant location and the submitter's details are not allowed.
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            I have read and double check all of the information filled in the form.
                                         </label>
                                         <div class="invalid-feedback">
                                             You must agree before submitting.

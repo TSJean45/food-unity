@@ -41,7 +41,6 @@ include 'connection.php';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
   Ticket is not ended</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -61,7 +60,6 @@ include 'connection.php';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
   Ticket is not cancelled</div>';
-                            echo mysqli_error($db);
                         }
                     }
 
@@ -82,7 +80,6 @@ The selected ticket is edited.</div>';
                         } else {
                             echo '<div class="alert alert-danger" role="alert">
 Ticket is not edited</div>';
-                            echo mysqli_error($db);
                         }
                     } ?>
                     <div class="card wow fadeInUp">
@@ -95,7 +92,6 @@ Ticket is not edited</div>';
 
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $pre = $row['ticketPrefix'];
-                                $resName = $row['restaurantName'];
                                 $resAdd = $row['restaurantAddress'];
                                 $resTime = $row['restaurantEndTime'];
                                 $resNote = $row['restaurantNote'];
@@ -125,7 +121,6 @@ Ticket is not edited</div>';
                                         <div class="col-md-12 mb-3">
                                             <label for="restaurantId" class="form-input-title"><b>Restaurant ID</b></label>
                                             <input type="text" class="form-control" name="restaurantId" readonly value="<?php echo $pre . '' . $id; ?>">
-                                            <input type="hidden" class="form-control" name="editId" value="<?php echo $id; ?>">
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -174,6 +169,9 @@ Ticket is not edited</div>';
                                 </div>
                                 <form class="needs-validation" novalidate action="" method="POST">
                                     <div class="form-row">
+                                        <div class="mb-3">
+                                            <input type="hidden" class="form-control" name="editId" value="<?php echo $id; ?>">
+                                        </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="editRestaurantDate" class="form-input-title"><b>Date</b></label>
                                             <input type="date" class="form-control" name="editRestaurantDate" <?php echo $readonly ?> min="<?php echo date("Y-m-d"); ?>" value="<?php echo $date ?>" required>

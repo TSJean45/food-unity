@@ -58,7 +58,6 @@ include 'connection.php';
                 } else {
                   echo '<div class="alert alert-danger" role="alert">
                       Ticket is not approved</div>';
-                  echo mysqli_error($db);
                 } ?>
             </li>
           </ul>
@@ -94,7 +93,6 @@ Admin is added</div>';
             } else {
               echo '<div class="alert alert-danger" role="alert">
 Admin is not added</div>';
-              echo mysqli_error($db);
             }
           }
 
@@ -110,7 +108,6 @@ Admin is not added</div>';
             } else {
               echo '<div class="alert alert-danger" role="alert">
                       Admin is not deleted</div>';
-              echo mysqli_error($db);
             }
           }
           ?>
@@ -143,7 +140,7 @@ Admin is not added</div>';
                     <td><?php echo $adName; ?></td>
                     <td><?php echo $adEmail; ?></td>
                     <td class="action-button">
-                      <button type="button" <?php echo $delete ?> class="btn delete" data-bs-toggle="modal" data-bs-target="#delete<?php echo $id; ?>">
+                      <button type="button" class="btn delete" data-bs-toggle="modal" data-bs-target="#delete<?php echo $id; ?>">
                         <img src="./assets/img/lineIcon/trash.svg"></button>
                     </td>
                   </tr>

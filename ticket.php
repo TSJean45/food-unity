@@ -19,7 +19,7 @@ include 'connection.php';
 
         <div id="hero-area-lessPad" class="hero-area-bg">
             <div class="section-header text-center">
-                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">On closing shift and have leftover food? Submit a Food Unity tickets now!</h2>
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Visit A Restaurant To Claim The Leftover Food! Support No Food Waste!</h2>
                 <div class=" wow fadeInDown" data-wow-delay="0.3s"></div>
             </div>
             <div class="container-fluid mb-5">
@@ -112,7 +112,6 @@ include 'connection.php';
         while ($row = mysqli_fetch_assoc($result)) {
             $pre = $row['ticketPrefix'];
             $id = $row['ticketId'];
-            $resName = $row['restaurantName'];
             $resAdd = $row['restaurantAddress'];
             $resTime = $row['restaurantEndTime'];
             $resNote = $row['restaurantNote'];
@@ -125,6 +124,8 @@ include 'connection.php';
             $resPax = $row['restaurantPax'];
             $subPassword = $row['submitterPassword'];
             $filterAdd = preg_replace('/\s+/', '%', $resAdd);
+            $date = $row['ticketDate'];
+            $formatDate = date('j F Y',strtotime($date));
         ?>
             <div class="modal fade" id="viewLocation<?php echo $id; ?>" aria-hidden="true">
                 <div class="modal-dialog modal-size">
@@ -147,7 +148,7 @@ include 'connection.php';
                                             </tr>
                                             <tr>
                                                 <td>Food Campaign Ends At</td>
-                                                <td><?php echo $resTime; ?></td>
+                                                <td><?php echo $formatDate .", ". $resTime ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Estimated Pax </td>

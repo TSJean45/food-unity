@@ -57,7 +57,6 @@ session_start();
                 } else {
                   echo '<div class="alert alert-danger" role="alert">
                       Ticket is not approved</div>';
-                  echo mysqli_error($db);
                 } ?>
             </li>
           </ul>
